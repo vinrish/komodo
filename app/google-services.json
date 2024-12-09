@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "3358017896",
+    "project_id": "komondo-3eb30",
+    "storage_bucket": "komondo-3eb30.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3358017896:android:2962526027f35b100aeedd",
+        "android_client_info": {
+          "package_name": "org.vinrish.komodo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtPOINif2EQZ-kdING9YE-76ItcDK3yC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

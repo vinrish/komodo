@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/animalFragment">
+    <fragment
+        android:id="@+id/animalDetailFragment"
+        android:name="org.vinrish.komodo.AnimalDetailFragment"
+        android:label="Endangered Animal Detail"
+        tools:layout="@layout/fragment_animal_detail" >
+        <argument
+            android:name="animalDocumentId"
+            app:argType="string" />
+        <argument
+            android:name="animalName"
+            app:argType="string" />
+        <argument
+            android:name="animalImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="animalPopulation"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalFragment"
+        android:name="org.vinrish.komodo.AnimalFragment"
+        android:label="Endangered Animal"
+        tools:layout="@layout/fragment_animal" >
+        <action
+            android:id="@+id/action_animalFragment_to_animalDetailFragment"
+            app:destination="@id/animalDetailFragment" />
+        <action
+            android:id="@+id/action_animalFragment_to_addAnimalFragment"
+            app:destination="@id/addAnimalFragment" />
+        <action
+            android:id="@+id/action_animalFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAnimalFragment"
+        android:name="org.vinrish.komodo.AddEndangeredAnimalFragment"
+        android:label="Add Endangered Animal"
+        tools:layout="@layout/fragment_add_animal" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.vinrish.komodo.EndangeredLoginFragment"
+        android:label="Login Page"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_animalFragment"
+            app:destination="@id/animalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="org.vinrish.komodo.EndangeredRegisterFragment"
+        android:label="Register Page"
+        tools:layout="@layout/fragment_register" />
+</navigation>
